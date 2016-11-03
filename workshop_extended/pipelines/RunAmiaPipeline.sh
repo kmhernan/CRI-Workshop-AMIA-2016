@@ -14,7 +14,11 @@ echo "subset of the data."
 echo ""
 
 # Get the pipeline directory 
-repo=$(dirname $PWD)
+repo=$(dirname $0)
+repo=$(cd $repo && pwd)
+
+# Build the config files
+${repo}/utils/build_config_files.sh $repo
 
 # make output directory if needed
 odir="${repo}/data/sample_run"
@@ -22,18 +26,18 @@ if [ -d $odir ]; then rm -rf $odir; fi
 mkdir -p $odir 
 echo "Top-level output directory of pipeline run: $odir"
 
-# Run/Log dir
+## Run/Log dir
 runDir="${odir}/run"
 logDir="${odir}/logs"
 echo "Analysis files output directory: $runDir"
 echo "Log files output directory: $logDir"
 
-# run 
+## run 
 script="${repo}/AMIA-ChIP-Seq-Pipeline.bds"
 echo "Running the pipeline..."
 echo `date`
 
-cd $odir && /usr/bin/time -v -o 2016-AMIA-ChIPSeq-Run.time \
+cd $odir && export PATH=/home/ubuntu/.bds:$PATH && /usr/bin/time -v -o 2016-AMIA-ChIPSeq-Run.time \
 bds $script -configFile ${repo}/config/chipseq.cfg \
 -contrastFiles ${repo}/config/contrast.Ab1.input.cfg \
 ${repo}/config/contrast.Ab1.IgG.cfg \

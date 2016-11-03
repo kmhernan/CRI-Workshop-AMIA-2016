@@ -4,7 +4,9 @@
 idir="/home/ubuntu/data/chipseq/fullset/fastqc"
 
 # Get the pipeline directory 
-repo=$(dirname $(dirname $PWD))
+repo=$(dirname $(dirname $0))
+repo=$(dirname $(cd $repo && pwd))
+
 odir="${repo}/data"
 
 # run
