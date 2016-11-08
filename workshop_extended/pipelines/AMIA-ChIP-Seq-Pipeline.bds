@@ -4,6 +4,7 @@
  * University of Chicago
  * cri.uchicago.edu
  * Kyle Hernandez - <khernandez@bsd.uchicago.edu>
+ * LGPLv3
  *
  * This pipeline takes the fastq files and runs the following pipeline:
  * FastQC -> Trimmomatic -> bwa aln -> sambamba -> deeptools ->

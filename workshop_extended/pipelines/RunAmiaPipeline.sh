@@ -1,11 +1,16 @@
 #!/bin/bash
 # This script simply runs the BDS pipeline for the AMIA data.
 # This is only a small subset of the data so that it can run quickly.
+# Kyle Hernandez
+# Center for Research Informatics
+# University of Chicago
+# License LGPLv3
 
 echo "---------------------------------------------------------------------"
 echo "2016 AMIA Pre-symposium Workshop"
 echo "Center for Research Informatics, University of Chicago"
 echo "Kyle Hernandez, Ph.D."
+echo "LGPLv3"
 echo ""
 echo "---------------------------------------------------------------------"
 echo "---------------------------------------------------------------------"

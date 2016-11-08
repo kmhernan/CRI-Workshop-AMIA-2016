@@ -1,4 +1,8 @@
 #!/bin/bash
+# Kyle Hernandez
+# Center for Research Informatics
+# University of Chicago
+# License LGPLv3
 
 repo=$1
 
